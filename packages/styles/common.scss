@@ -1,0 +1,88 @@
+//flex布局样式
+//单轴
+@mixin flex-type ($type1, $type2) {
+    display: flex;
+    justify-content: $type1;
+    align-items: $type2;
+}
+
+//多轴
+@mixin flex-types ($type1, $type2) {
+    display: flex;
+    flex-direction: column;
+    justify-content: $type1;
+    align-items: $type2;
+}
+
+//设置竖直方向
+@mixin flex-column {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-column {
+    @include flex-column();
+}
+
+.flex-center {
+    @include flex-type(center, center);
+}
+
+.flex-align {
+    @include flex-type(center, null);
+}
+
+.flex-justify {
+    @include flex-type(null, center);
+}
+
+
+.flexs-center {
+    @include flex-types(center, center);
+}
+
+.flexs-align {
+    @include flex-types(center, null);
+}
+
+.flexs-justify {
+    @include flex-types(null, center);
+}
+
+
+.mr10 {
+    margin-right: 10px;
+}
+
+.ml10 {
+    margin-left: 10px;
+}
+
+.mt10 {
+    margin-top: 10px;
+}
+
+.mb10 {
+    margin-bottom: 10px;
+}
+
+.mr20 {
+    margin-right: 20px;
+}
+
+.ml20 {
+    margin-left: 20px;
+}
+
+.mt20 {
+    margin-top: 20px;
+}
+
+.mb20 {
+    margin-bottom: 20px;
+}
