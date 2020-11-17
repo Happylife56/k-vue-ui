@@ -4,8 +4,8 @@ module.exports = {
   head: [
     ['link', { rel: 'icon', href: '/images/cat.jpeg' }],
   ],
-  // base: '/blog-static/', // 这是部署到github相关的配置
-  // dest:'../blog-static/',
+  base: '/kui/', // 这是部署到github相关的配置
+  dest: 'kui',
   markdown: {
     lineNumbers: false // 代码块显示行号
   },
