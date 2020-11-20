@@ -1,8 +1,3 @@
-import KInput from './input.vue';
+import KInput from './src/main.vue';
 
-const pathName = { title: 'input输入框', name: 'input' };
-
-export {
-  pathName,
-  KInput,
-};
+export default KInput;

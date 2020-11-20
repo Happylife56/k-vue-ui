@@ -48,7 +48,6 @@ export default {
   },
   computed: {
     api() {
-      console.log(this.$page.frontmatter)
       if (this.methods) return this.$page.frontmatter.Methods
       return this.$page.frontmatter.API
     },

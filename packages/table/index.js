@@ -1,7 +1,3 @@
-import KTable from './table.vue';
+import KTable from './src/main.vue';
 
-const pathName = { title: 'table表格', name: 'table' };
-export {
-  pathName,
-  KTable,
-};
+export default KTable;

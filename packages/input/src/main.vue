@@ -18,7 +18,7 @@
 
 <script>
 export default {
-  name: 'Input',
+  name: 'KInput',
   props: {
     value: {
       type: [String, Number],

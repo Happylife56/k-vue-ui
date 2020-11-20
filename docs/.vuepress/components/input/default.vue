@@ -1,6 +1,6 @@
 <template>
   <div class="input-box">
-    <KInput v-model="value" placeholder="请输入内容" :type="type">
+    <k-input v-model="value" placeholder="请输入内容" :type="type">
       <template>
         <slot name="append" />
       </template>
@@ -13,12 +13,11 @@
       <template slot="suffix">
         <slot name="suffix" />
       </template>
-    </KInput>
+    </k-input>
   </div>
 </template>
 
 <script>
-import KInput from '../../../../packages/input/input'
 export default {
   props: {
     type: { type: String, default: 'number' }
@@ -28,7 +27,6 @@ export default {
       value: ''
     }
   },
-  components: { KInput }
 }
 </script>
 

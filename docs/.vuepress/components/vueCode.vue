@@ -3,12 +3,12 @@
     <div class="vue-component">
       <slot></slot>
     </div>
-    <el-collapse-transition>
+    <el-collapse-transition>  
       <div class="pre-code" v-if="showCode">
+        <div class="code-html" ref="code">
         <div class="code-explain" v-if="$slots.explain">
           <slot name="explain"></slot>
         </div>
-        <div class="code-html" ref="code">
           <slot name="code"></slot>
         </div>
       </div>
@@ -65,16 +65,15 @@ export default {
     width: 100%;
     background: #f5f7fb;
 
-    .code-explain {
-      padding: 20px;
-      margin: 0 20px;
-      border: 1px solid #ebebeb;
-      border-radius: 3px;
-      background: #fff;
-    }
-
     .code-html {
       padding: 20px;
+
+      .code-explain {
+        padding: 15px 20px;
+        border: 1px solid #ebebeb;
+        border-radius: 3px;
+        background: #fff;
+      }
 
       .language-html {
         margin: 0;

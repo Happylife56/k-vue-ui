@@ -17,8 +17,18 @@ yarn add k-vue-ui
 
 ```
 
+#### 全局引入:
 
-#### 使用  按需引入
+```javascript
+
+import Vue from 'vue'
+import KUI from 'k-vue-ui'
+
+Vue.use(KUI)
+
+```
+
+#### 按需引入
 
 
 ```vue
@@ -34,16 +44,6 @@ export default {
 
 
 
-#### 全局components:
-
-```javascript
-
-import Vue from 'vue'
-import { kInput } from 'k-vue-ui'
-
-Vue.use(kInput)
-
-```
 
 
 

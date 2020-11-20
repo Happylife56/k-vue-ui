@@ -44,7 +44,16 @@ module.exports = {
           path: '/components/input',
           children: [
             // ['/components/alert/', 'Alert'],
-            ['/components/input', 'input组件'],
+            ['/components/input', 'input 输入框'],
+          ]
+        },
+        {
+          title: '可复用性 & 组合',
+          collapsable: false,
+          path: '/components/filters',
+          children: [
+            ['/components/filters', 'filter 过滤器'],
+            ['/components/directives', 'directive 指令'],
           ]
         },
 

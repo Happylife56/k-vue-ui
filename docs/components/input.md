@@ -40,18 +40,18 @@ Input 为受控组件，它总会显示 Vue 绑定值。
 
 ```html
 <template>
-  <KInput placeholder="请输入内容" v-model="value"></KInput>
+  <k-input placeholder="请输入内容" v-model="value"></k-input>
 </template>
 
 <script>
-import KInput from 'k-vue-ui'
+import k-input from 'k-vue-ui'
 export default {
   data(){
     return {
       value: ''
     }
   },
-  components: { kInput }
+  components: { k-input }
 }
 </script>
 
@@ -68,22 +68,23 @@ export default {
 <div>
   <InputDefault type="integer" />
 </div>
+<div slot="explain">使用type="integer"输入框只能输入整数 </div>
 <div slot="code">
 
 ```html
 <template>
-  <KInput placeholder="请输入内容" type="integer" v-model="value"></KInput>
+  <k-input placeholder="请输入内容" type="integer" v-model="value"></k-input>
 </template>
 
 <script>
-import KInput from 'k-vue-ui'
+import k-input from 'k-vue-ui'
 export default {
   data(){
     return {
       value: ''
     }
   },
-  components: { kInput }
+  components: { k-input }
 }
 </script>
 
@@ -115,33 +116,35 @@ export default {
       </InputDefault>
    </div>
 </div>
+
+<div slot="explain">可以通过 prefix-icon 和 suffix-icon 属性在 input 组件首部和尾部增加显示图标，也可以通过 slot 来放置图标 </div>
 <div slot="code">
 
 ```html
 <template>
-  <KInput placeholder="请输入内容" v-model="value" type="text">
+  <k-input placeholder="请输入内容" v-model="value" type="text">
     <i slot="prefix" class="el-input__icon el-icon-search"></i>
-  </KInput>
-  <KInput placeholder="请输入内容" v-model="value" type="text">
+  </k-input>
+  <k-input placeholder="请输入内容" v-model="value" type="text">
     <i slot="suffix" class="el-input__icon el-icon-search"></i>
-  </KInput>
-  <KInput placeholder="请输入内容" v-model="value" type="number">
+  </k-input>
+  <k-input placeholder="请输入内容" v-model="value" type="number">
     <template slot="prepend">￥</template>
-  </KInput>
-  <KInput placeholder="请输入内容" v-model="value" type="text">
+  </k-input>
+  <k-input placeholder="请输入内容" v-model="value" type="text">
     <template slot="append">.com</template>
-  </KInput>
+  </k-input>
 </template>
 
 <script>
-import KInput from 'k-vue-ui'
+import k-input from 'k-vue-ui'
 export default {
   data(){
     return {
       value: ''
     }
   },
-  components: { kInput }
+  components: { k-input }
 }
 </script>
 

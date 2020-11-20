@@ -17,18 +17,22 @@
 </template>
 
 <script>
-import { getComponent } from '../utils';
+// import { getComponent } from '../utils';
 
 export default {
   data() {
     return {
       activeIndex: 'input',
-      menuList: [],
+      menuList: [
+        { title: 'input输入框', name: 'input' },
+        { title: 'table', name: 'table' },
+        { title: 'test测试', name: 'test' },
+      ],
     };
   },
   mounted() {
-    const { listNames } = getComponent();
-    this.menuList = listNames;
+    // const { listNames } = getComponent();
+    // this.menuList = listNames;
   },
   methods: {
     handleSelect(key, keyPath) {

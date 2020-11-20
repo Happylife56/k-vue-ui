@@ -28,6 +28,7 @@ module.exports = {
     'no-shadow': ['error', { allow: ['state'] }], // 允许对其进行阴影处理
     'import/prefer-default-export': 'off', // 模块只输出一个变量时，是否需要添加default
     'no-plusplus': 'off', // 一元运算符
+    'no-nested-ternary': 'off', // 三元表达式
     'import/no-dynamic-require': 'off', //require
     'global-require': 'off', //
   },
