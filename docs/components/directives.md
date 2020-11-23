@@ -1,20 +1,14 @@
 ---
 Methods:
- - name: moneyType
+ - name: focus
    parameters: null
-   description: 金额类型，返回￥10
- - name: moneyPoint
-   parameters: 可选，如果有参数，为0则返回0
-   description: 金额浮点类型，返回￥10.00 
- - name: dataType
+   description: 输入框自动获取焦点
+ - name: money
+   parameters: 可选，point小数点后两位 
+   description: 返参金额的处理
+ - name: title
    parameters: null
-   description: 为空返回0
- - name: paramsType
-   parameters: null
-   description: 为空返回- 
- - name: rounding
-   parameters: null
-   description: 限制小数点后两位
+   description: 内容超出显示省略号，hover显示提示
 ---
 
 ### 自定义指令
@@ -59,13 +53,22 @@ export default {
 
 <vuecode md>
 <filterDirective vMoney></filterDirective>
+
+<div slot="explain">可选参数：point 浮点类型 小数点后两位</div>
 <div slot="code">
 
 ```html
 <template>
   <div>
-    <span>参数不为空：{{ string | paramsType }}</span>
-    <span>参数为空：{{ string2 | paramsType }}</span>
+    <span class="mr20">使用前金额：
+      <span class="c-red">{{ price }}</span>
+    </span>
+    <span>使用后金额：
+      <span class="c-red mr20" v-money>{{ price }}</span>
+    </span>
+    <span>浮点类型：
+      <span class="c-red" v-money.point>{{ price }}</span>
+    </span>
   </div>
 </template>
 
@@ -73,11 +76,43 @@ export default {
 export default {
   data(){
     return {
-      string: '这是一段字符串',
-      string2: ''
+      price: 100,
     }
   },
 }
+</script>
+
+<style></style>
+```
+
+</div>
+</vuecode>
+
+#### Tittle 文字提示
+> 文字超出隐藏，鼠标hover显示全部
+
+<vuecode md>
+<filterDirective vTitle></filterDirective>
+<div slot="code">
+
+```html
+<template>
+  <div>
+    <div class="row-bg">
+      <div v-title>
+         这是一段隐藏文字，这是一段隐藏文字,这是一段隐藏文字,这是一段隐藏文字
+      </div>
+    </div>
+    <div class="row-purple mt20">
+      <div v-title>
+        这是一段隐藏文字，这是一段隐藏文字,这是一段隐藏文字,这是一段隐藏文字
+      </div>
+    </div>
+  </div>
+</template>
+
+<script>
+export default {}
 </script>
 
 <style></style>

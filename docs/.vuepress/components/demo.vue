@@ -6,6 +6,7 @@
 
 <script>
 export default {
+  name: 'demo',
   data() {
     return {
       price: 100

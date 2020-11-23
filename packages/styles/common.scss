@@ -25,6 +25,15 @@
     display: flex;
 }
 
+.flex1 {
+    flex: 1;
+}
+
+.flex-warp {
+    display: flex;
+    flex-wrap: wrap;
+}
+
 .flex-column {
     @include flex-column();
 }
@@ -37,10 +46,17 @@
     @include flex-type(center, null);
 }
 
+.flex-around {
+    @include flex-type(space-around, center);
+}
+
+.flex-between {
+    @include flex-type(space-between, center);
+}
+
 .flex-justify {
     @include flex-type(null, center);
 }
-
 
 .flexs-center {
     @include flex-types(center, center);
@@ -89,4 +105,81 @@
 
 .c-red {
     color: #f4364c;
+}
+
+.c-yellow {
+    color: #ffb14d;
+}
+
+.c-blue {
+    color: #409eff;
+}
+
+.c-green {
+    color: #66bf4b;
+}
+
+.color-33 {
+    color: #333333;
+}
+
+.color-99 {
+    color: #999999;
+}
+
+.color-66 {
+    color: #666666;
+}
+
+.color-d2 {
+    color: #d2d2d2;
+}
+
+.font-weight {
+    font-weight: bold;
+}
+
+.line-through {
+    text-decoration: line-through;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.not-allowed {
+    cursor: not-allowed;
+}
+
+$borderColor:#606266;
+
+// 自定义指令的style
+.text-overflow {
+    width: 98%;
+    overflow: hidden;
+    display: inline-block;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.title-hover {
+    z-index: 100;
+    position: absolute;
+    bottom: 45px;
+    border: 1px solid #606266;
+    border-radius: 4px;
+    padding: 6px 8px;
+    background: #fff;
+    @include flex-types(center, center);
+
+    .border-div {
+        width: 8px;
+        height: 8px;
+        border-bottom: 1px solid #606266;
+        border-right: 1px solid #606266;
+        background: #fff;
+        position: absolute;
+        bottom: -5px;
+        transform: rotate(45deg)
+    }
 }

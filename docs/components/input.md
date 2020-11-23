@@ -34,7 +34,7 @@ Input 为受控组件，它总会显示 Vue 绑定值。
 
 <vuecode md>
 <div>
- <InputDefault/>
+ <inputDefault/>
 </div>
 <div slot="code">
 
@@ -66,7 +66,7 @@ export default {
 
 <vuecode md>
 <div>
-  <InputDefault type="integer" />
+  <inputDefault type="integer" />
 </div>
 <div slot="explain">使用type="integer"输入框只能输入整数 </div>
 <div slot="code">
@@ -100,20 +100,20 @@ export default {
 <vuecode md>
 <div>
    <div class="flex">
-      <InputDefault type="text" class="mr20">
+      <inputDefault type="text" class="mr20">
         <i slot="prefix" class="el-input__icon el-icon-search"></i>
-      </InputDefault>
-      <InputDefault type="text">
+      </inputDefault>
+      <inputDefault type="text">
         <i slot="suffix" class="el-input__icon el-icon-search"></i>
-      </InputDefault>
+      </inputDefault>
    </div>
     <div class="flex mt20">
-      <InputDefault type="number" class="mr20">
+      <inputDefault type="number" class="mr20">
         <template slot="prepend">￥</template>
-      </InputDefault>
-      <InputDefault type="text">
+      </inputDefault>
+      <inputDefault type="text">
         <template slot="append">.com</template>
-      </InputDefault>
+      </inputDefault>
    </div>
 </div>
 

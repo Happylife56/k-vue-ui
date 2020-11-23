@@ -1,5 +1,5 @@
 <template >
-  <div v-if="methods" class="table-api">
+  <div v-if="methods" class="table-api mt20">
     <table class="methods-style">
       <thead>
         <tr>
@@ -17,7 +17,7 @@
       </tbody>
     </table>
   </div>
-  <div v-else class="table-api">
+  <div v-else class="table-api mt20">
     <table class="api-style">
       <thead>
         <tr>
@@ -43,6 +43,7 @@
 
 <script>
 export default {
+  name: 'vuetable',
   props: {
     methods: { type: Boolean, default: false }
   },
@@ -141,20 +142,20 @@ table {
 }
 
 table td {
-  padding: 7px;
-  border: 1px solid rgba(0, 0, 0, 0.05);
+  padding: 15px;
+  // border: 1px solid rgba(0, 0, 0, 0.05);
   color: rgba(0, 0, 0, 0.7);
   font-size: 0.9rem;
 }
 th {
-  padding: 7px;
+  padding: 15px;
   text-align: left;
-  border: 1px solid rgba(0, 0, 0, 0.05);
+  border: 1px solid #dcdfe6;
   font-size: 0.9rem !important;
   background: rgb(250, 250, 250);
 }
 tbody tr {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  border-bottom: 1px solid #dcdfe6;
 }
 
 @media only screen and (max-width: 650px) {

@@ -39,4 +39,26 @@ export const directives = {
       el.innerHTML = `${value}` || '-';
     },
   },
+  /**
+   * title
+   * 文字超出显示，绑定title，鼠标hover事件显示内容
+   */
+  title: {
+    inserted: (el) => {
+      el.parentNode.style.position = 'relative';
+      const titleDiv = document.createElement('div');
+      titleDiv.innerHTML = el.textContent;
+      titleDiv.setAttribute('class', 'title-hover');
+      const bdDiv = document.createElement('div');
+      bdDiv.setAttribute('class', 'border-div');
+      titleDiv.appendChild(bdDiv);
+      el.setAttribute('class', 'text-overflow');
+      el.onmouseover = () => {
+        el.parentNode.appendChild(titleDiv);
+      };
+      el.onmouseout = () => {
+        el.parentNode.removeChild(titleDiv);
+      };
+    },
+  },
 };

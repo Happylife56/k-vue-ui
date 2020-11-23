@@ -32,19 +32,30 @@
         <span class="c-red mr20" v-money>{{ price }}</span>
       </span>
       <span>浮点类型：
-        <span class="c-red">{{ price | moneyPoint | moneyType }}</span>
+        <span class="c-red" v-money.point>{{ price }}</span>
       </span>
+    </div>
+    <!-- 鼠标hover tittle -->
+    <div v-if="vTitle">
+      <div class="row-bg">
+        <div v-title>这是一段隐藏文字，这是一段隐藏文字,这是一段隐藏文字,这是一段隐藏文字</div>
+      </div>
+      <div class="row-purple mt20">
+        <div v-title>这是一段隐藏文字，这是一段隐藏文字,这是一段隐藏文字,这是一段隐藏文字</div>
+      </div>
     </div>
   </div>
 </template>
 
 <script>
 export default {
+  name: 'filterDirective',
   props: {
     money: { type: Boolean, default: false },
     params: { type: Boolean, default: false },
     vInput: { type: Boolean, default: false },
     vMoney: { type: Boolean, default: false },
+    vTitle: { type: Boolean, default: false },
   },
   data() {
     return {
@@ -57,5 +68,14 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss" scoped>
+.row-bg {
+  width: 300px;
+  padding: 10px;
+  background-color: #f9fafc;
+}
+.row-purple {
+  padding: 10px;
+  background-color: #d3dce6;
+}
 </style>

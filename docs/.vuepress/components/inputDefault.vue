@@ -19,6 +19,7 @@
 
 <script>
 export default {
+  name: 'inputDefault',
   props: {
     type: { type: String, default: 'number' }
   },

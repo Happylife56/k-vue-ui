@@ -44,6 +44,7 @@ module.exports = {
           path: '/components/input',
           children: [
             // ['/components/alert/', 'Alert'],
+            ['/components/layout', 'layout 布局'],
             ['/components/input', 'input 输入框'],
           ]
         },
