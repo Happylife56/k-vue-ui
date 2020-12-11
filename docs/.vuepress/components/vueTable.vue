@@ -45,14 +45,17 @@
 export default {
   name: 'vuetable',
   props: {
-    methods: { type: Boolean, default: false }
+    methods: { type: Boolean, default: false },
+    attrs: { type: Boolean, default: false }
   },
   computed: {
     api() {
-      if (this.methods) return this.$page.frontmatter.Methods
-      return this.$page.frontmatter.API
+      const { Methods, API, Attrs } = this.frontmatter
+      if (this.methods) return Methods
+      else if (this.attrs) return Attrs
+      return API
     },
-    data() {
+    frontmatter() {
       return this.$page.frontmatter
     },
   }

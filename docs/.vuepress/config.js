@@ -5,7 +5,7 @@ module.exports = {
     ['link', { rel: 'icon', href: '/images/cat.jpeg' }],
   ],
   base: '/kkui/', // 这是部署到github相关的配置
-  dest: '../kkui',
+  dest: './dist',
   markdown: {
     lineNumbers: false // 代码块显示行号
   },
@@ -46,6 +46,7 @@ module.exports = {
             // ['/components/alert/', 'Alert'],
             ['/components/layout', 'layout 布局'],
             ['/components/input', 'input 输入框'],
+            ['/components/table', 'table 表格'],
           ]
         },
         {

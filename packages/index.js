@@ -1,9 +1,11 @@
 import directives from './directives';
 import filters from './filters';
 import KInput from './input';
+import KButton from './button';
 import KTable from './table';
 
 const KUI = {
+  KButton,
   KInput,
   KTable,
 };
